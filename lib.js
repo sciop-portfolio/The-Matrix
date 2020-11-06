@@ -151,7 +151,7 @@ class Screen {
     /**
      *  @desc Find an empty place and add a line of letters to it
      */
-    addLine() {
+    addLine(startingOffset = 0) {
         if(this.emptyLinesCount < 1) return;
         let sel = Math.floor(Math.random()*this.emptyLinesCount);
         let i = 0;
@@ -162,6 +162,8 @@ class Screen {
             if(this.lines[i] === false) {
                 if(sel === 0) {
                     this.lines[i] = new Line(i*size, this.rows);
+                    this.lines[i].head += startingOffset;
+                    this.lines[i].firstToHide += startingOffset;
                     this.emptyLinesCount--;
                 }
                 sel--;

@@ -42,5 +42,5 @@ function redo() {
     let cols = Math.ceil(windowHeight/size);
     background('black');
     scr = new Screen(cols, rows);
-    for(let i = 0; i < Math.floor(lineDensity*rows); i++) scr.addLine();
+    for(let i = 0; i < Math.floor(lineDensity*rows); i++) scr.addLine(-Math.floor(Math.random()*50));
 }

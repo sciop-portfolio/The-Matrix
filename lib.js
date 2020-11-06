@@ -162,7 +162,6 @@ class Screen {
             if(this.lines[i] === false) {
                 if(sel === 0) {
                     this.lines[i] = new Line(i*size, this.rows);
-                    console.log(i);
                     this.emptyLinesCount--;
                 }
                 sel--;

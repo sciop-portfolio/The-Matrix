@@ -34,7 +34,7 @@ class Letter {
         fill('black');
         strokeWeight(0);
         if(isHead) rect(position[0] - size/2 - 1, position[1] - size/2 - 1, size + 2, size + 2);
-        else rect(position[0] - size/2 - 1, position[1] - size/2 - 3, size + 2, size);
+        else rect(position[0] - size/2 - 1, position[1] - size/2 - 3, size + 2, size + 2);
 
         // If we acually want to write anything, do it
         if(!deleteOnly) {
